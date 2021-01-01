@@ -19,7 +19,8 @@ namespace lessons
             byte longik = 1; //8 байт от -дохуя до дохуя
             byte ulongik = 1; //8 байт от 0 до хуя
 
-            Console.WriteLine(bytik + sbytik + shortik + ushortik + intik + uintik + longik + ulongik);
+
+            Console.WriteLine(Console.ReadLine()/*так можно lulw*/ + bytik + sbytik + shortik + ushortik + intik + uintik + longik + ulongik);
         }
     }
 }
