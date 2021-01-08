@@ -11,21 +11,28 @@ namespace lessons
     {
         static void Main(string[] args)
         {
-            //Convertation WAOW!
             NumberFormatInfo numberFormatInfo = new NumberFormatInfo()
             {
-                NumberDecimalSeparator = ".",//Цудоуна
+                NumberDecimalSeparator = ".",
             };
-            string str = "1", str2 = "2";
+            
+            string str = "5";
 
-            int a = Convert.ToInt32(str);
-            int b = Convert.ToInt32(str2);
-            Console.WriteLine(a + b);
+            int a = int.Parse(str);
+            Console.WriteLine(a + 5);
+            
+            str = "5,6";
+            double b = double.Parse(str);
+            Console.WriteLine(b - 1);
 
-            str = "1.5";
+            str = "5.6";
+            b = double.Parse(str, numberFormatInfo);
+            Console.WriteLine(b + 1);
 
-            Console.WriteLine(Convert.ToDouble(str, numberFormatInfo));
-
+            str = "5,4";
+            double.TryParse(str, out b);
+            // если не парсит, то 0, иначе value. Look's like a little bit пиздато
+            Console.WriteLine(b != 0 ? b.ToString() : "lol"); 
 
         }
     }
